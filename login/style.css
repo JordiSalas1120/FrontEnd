@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Rowdies:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+html{
+    font-family: 'Rowdies', cursive;
+    background: linear-gradient(121deg, #AD00FF 0%, #0C0056 100%), linear-gradient(121deg, #FA00FF 0%, rgba(0, 255, 71, 0) 100%), linear-gradient(127deg, #00F0FF 0%, #A80000 100%), radial-gradient(107% 142% at 15% 104%, #F3D0FC 0%, #1700A4 100%), radial-gradient(100% 100% at 50% 0%, #7300A9 0%, #00FFE0 100%), radial-gradient(100% 100% at 50% 0%, #7300A9 0%, #00FFE0 100%), linear-gradient(127deg, #B7D500 0%, #2200AA 100%);
+    background-blend-mode: overlay, color, overlay, difference, color-dodge, difference, normal;;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.contenedor{
+    position: relative;
+    width: 32rem;
+    height: 32rem;
+    background-color: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur( 10px );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5rem auto;
+    border-radius: 50px;
+    
+
+
+}
+.box{
+    position: relative;
+}
+.box .squared{
+    
+    position: fixed;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255, 255,0.2);
+    border-bottom: 1px solid rgba(255, 255, 255,0.2);
+    background: rgba(255, 255, 255, 0.034);
+    border-radius: 15px;
+    
+    animation: animate 5s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+    
+}
+
+
+.box .squared:nth-child(1){
+    
+    top: -10%;
+    right: -4%;
+    width: 100px;
+    height: 100px;
+    z-index: -1;
+}
+.box .squared:nth-child(2){
+    
+    top: 1%;
+    Left: 15%;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+}
+.box .squared:nth-child(3){
+    bottom: -5%;
+    right: 12%;
+    width: 80px;
+    height: 80px;
+    z-index: -1;
+}
+.box .squared:nth-child(4){
+    bottom: -15%;
+    left: 30%;
+    width: 50px;
+    height: 50px;
+    z-index: 999;
+}
+.box .squared:nth-child(5){
+    bottom: 25%;
+    left: -5%;
+    width: 50px;
+    height: 50px;
+}
+@keyframes animate {
+    0%, 100%{
+        transform: translateY(-30px)
+    }
+    50%{
+        transform: translateY(30px);
+    }
+}
+
+#titulo{
+    color: whitesmoke;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    
+}
+#formulario #label{
+    width: 20rem;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-family: 'Oxygen', sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    
+    
+}
+.contenido{
+    padding: 1.5rem 0;
+
+}
+.contenido h2{
+    padding: 0 2rem 2rem 2rem;
+}
+input{
+    width: 80%;
+    border: none;
+    border-bottom:2px solid black;
+    color: whitesmoke;
+    height: 1.9rem;
+    background: none;
+    margin-top: 15px;
+    outline: none;
+}
+.boton{
+    width: 100%;
+    display: inline-block;
+    
+}
+button {
+    text-decoration: none;
+    position: absolute;
+    border: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #fff;
+    width: 9em;
+    height: 3em;
+    margin: 0 -10%;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+button:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+@keyframes ani {
+    0% {
+    background-position: 0%;
+    }
+
+    100% {
+    background-position: 400%;
+    }
+}
+
+button:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+   }
+   
+   button:hover::before {
+    filter: blur(20px);
+   }
+   
+   button:active {
+    background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+   }
